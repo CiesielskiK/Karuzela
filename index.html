@@ -1,0 +1,89 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Karuzela</title>
+	<link rel="stylesheet" type="text/css" href="vendor/normalize.css">
+	<link rel="stylesheet" type="text/css" href="vendor/flickity.min.css" media="screen">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css/style.prefixed.css">
+	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+</head>
+
+<body>
+
+	<div class="main-carousel" id="results">
+	</div>
+	
+	<button class="button btn btn-dark">Restart</button>
+	
+
+	
+		<!--The div element for the map -->
+	<div id="map"></div>
+	
+	<div id="infos"></div>
+	<div class="progress-bar"></div>
+	<script id="template-list-item" type="x-tmpl-mustache">
+		<div class="carousel-cell" id="carousel-cell{{number}}" style="background-image:url('{{{image}}}');
+		background-repeat:no-repeat;background-size:cover;background-position:50%50%;">
+			<div class="container">
+				<h1>{{title}}</h1>
+				{{{desc}}}
+			</div>
+		</div>
+	</script>
+
+	<script>
+		var sliderData = [
+			{
+				number: '1',
+				image: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/orange-tree.jpg',
+				title: '“Be yourself; everyone else is already taken.”',
+			    desc: '<p>Oscar Wilde</p><p>1967</p>',
+			    coords: {lat: 52.397932, lng: 16.919511}
+			},
+			{
+				number: '2',
+				image: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/golden-hour.jpg', 
+				title: '“So many books, so little time.”',
+			    desc: '<p>Oscar Wilde</p><p>1970</p>',
+			    coords: {lat: 51.114064, lng: 17.021382}
+			},
+			{
+				number: '3',
+				image: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/submerged.jpg', 
+				title: '“Always forgive your enemies; nothing annoys them so much.”',
+			    desc: '<p>Oscar Wilde</p><p>1973</p>',
+			    coords: {lat: 50.064316, lng: 19.956114}
+			},
+			{
+				number: '4',
+				image: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/flight-formation.jpg', 
+				title: '“Without music, life would be a mistake.”',
+			    desc: '<p>Oscar Wilde</p><p>1978</p>',
+			    coords: {lat: 54.443384, lng: 18.566142}
+			},
+			{
+				number: '5',
+				image: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/drizzle.jpg', 
+				title: '“You only live once, but if you do it right, once is enough.” ',
+			    desc: '<p>Oscar Wilde</p><p>1980</p>',
+			    coords: {lat: 51.235656, lng: 22.572002}
+			}
+		];
+	</script>
+
+
+
+
+	<script src="vendor/flickity.pkgd.min.js"></script>
+	<script src="https://unpkg.com/flickity-hash@1/hash.js"></script>
+	<script src="vendor/mustache.js"></script>
+	<script src="js/script.js"></script>
+	<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDEUYMy_r1hk7BvaMoo9HHA9b0sMkHcK1Y&callback=initMap">
+    </script>
+</body>
+</html>

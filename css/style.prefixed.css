@@ -1,0 +1,11 @@
+.container { max-width: 1200px; margin: 0 auto; padding-top: 15vh; }
+
+.carousel-cell { width: 100%; /* full width */ height-min: 250px; height: 50vh; margin-right: 10px; font-size: 60px; font-family: 'Lobster', cursive; text-align: center; color: #fff; }
+
+.carousel-cell p { font-size: 30px; }
+
+.button { position: absolute; top: 10px; left: 10px; }
+
+.progress-bar { height: 20px; width: 0; background: #333; position: absolute; top: 47.5vh; z-index: 0; }
+
+#map { height: 50vh; /* The height is 400 pixels */ width: 100%; /* The width is the width of the web page */ }
